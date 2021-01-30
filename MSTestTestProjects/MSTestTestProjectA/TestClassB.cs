@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTestProjectA
 {
     [TestClass]
-    public class UnitTestA2
+    public class TestClassB
     {
         [TestMethod]
-        public async Task TestA2_1()
+        public async Task TestMethodZ()
         {
             await Task.Delay(3000);
         }

@@ -4,10 +4,10 @@ using NUnit.Framework;
 namespace NUnitTestProjectA
 {
     [Parallelizable(ParallelScope.All)]
-    public class UnitTestA2
+    public class TestClassB
     {
         [Test]
-        public async Task TestA2_1()
+        public async Task TestMethodZ()
         {
             await Task.Delay(3000);
         }

@@ -1,25 +1,20 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xunit;
+using NUnit.Framework;
 
-namespace XUnitTestProjectA
+namespace NUnitTestProjectB
 {
-    public class UnitTestA1
+    [Parallelizable(ParallelScope.All)]
+    public class TestClassC
     {
         public static IEnumerable<object[]> Names = new[] {
             new object[]{ "Alice" },
             new object[]{ "Bob" },
         };
 
-        [Theory]
-        [MemberData(nameof(Names))]
-        public async Task TestA1_1(string _)
-        {
-            await Task.Delay(3000);
-        }
-
-        [Fact]
-        public async Task TestA1_2()
+        [Test]
+        [TestCaseSource(nameof(Names))]
+        public async Task TestMethodW(string _)
         {
             await Task.Delay(3000);
         }

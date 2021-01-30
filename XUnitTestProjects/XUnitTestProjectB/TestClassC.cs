@@ -4,7 +4,7 @@ using Xunit;
 
 namespace XUnitTestProjectB
 {
-    public class UnitTestB1
+    public class TestClassC
     {
         public static IEnumerable<object[]> Names = new[] {
             new object[]{ "Alice" },
@@ -13,7 +13,7 @@ namespace XUnitTestProjectB
 
         [Theory]
         [MemberData(nameof(Names))]
-        public async Task TestB1_1(string _)
+        public async Task TestMethodW(string _)
         {
             await Task.Delay(3000);
         }

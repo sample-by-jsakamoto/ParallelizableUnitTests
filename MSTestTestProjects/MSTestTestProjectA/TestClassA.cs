@@ -1,15 +1,21 @@
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MSTestTestProjectB
+namespace MSTestTestProjectA
 {
     [TestClass]
-    public class UnitTestB1
+    public class TestClassA
     {
         [DataTestMethod]
         [DataRow("Alice")]
         [DataRow("Bob")]
-        public async Task TestB1_1(string _)
+        public async Task TestMethodX(string _)
+        {
+            await Task.Delay(3000);
+        }
+
+        [TestMethod]
+        public async Task TestMethodY()
         {
             await Task.Delay(3000);
         }

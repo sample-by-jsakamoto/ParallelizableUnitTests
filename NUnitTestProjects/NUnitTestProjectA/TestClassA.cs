@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace NUnitTestProjectA
 {
     [Parallelizable(ParallelScope.All)]
-    public class UnitTestA1
+    public class TestClassA
     {
         public static IEnumerable<object[]> Names = new[] {
             new object[]{ "Alice" },
@@ -14,13 +14,13 @@ namespace NUnitTestProjectA
 
         [Test]
         [TestCaseSource(nameof(Names))]
-        public async Task TestA1_1(string _)
+        public async Task TestMethodX(string _)
         {
             await Task.Delay(3000);
         }
 
         [Test]
-        public async Task TestA1_2()
+        public async Task TestMethodY()
         {
             await Task.Delay(3000);
         }
